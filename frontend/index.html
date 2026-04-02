@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict the price</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <h1>Used Car Price Prediction</h1>
+        <p>A website which predicts the selling price for your used car</p>
+
+        <div id="vehicle_information">
+            <h4>Vehicle Information</h4>
+            <form action="">
+                <div id="model">
+                    <label for="model">Model:</label><br>
+                    <input type="text" placeholder="alto" id="model" name="model"><br>
+                </div>
+                <div id="vage">
+                    <label for="vage">Vehicle Age:</label><br>
+                    <input type="number" placeholder="9" id="vage" name="vage"><br>
+                </div>
+                <div id="km_driven">
+                    <label for="km_driven">Kilometers Driven:</label><br>
+                    <input type="number" step="any" placeholder="11.69" id="km_driven" name="km_driven"><br>
+
+                </div>
+            </form>
+        </div>
+
+        <div id="technical_specifications">
+            <h4>Technical Specifications</h4>
+            <form action="">
+                <div id="mileage">
+                    <label for="mileage">Mileage:</label><br>
+                    <input type="number" step="any" placeholder="19.70"><br>
+                </div>
+                <div id="engine">
+                    <label for="engine">Engine:</label><br>
+                    <input type="number" step="any" placeholder="1179"><br>
+                </div>
+                <div id="max_power">
+                    <label for="max_power">Maximum Power:</label><br>
+                    <input type="number" step="any" placeholder="67.10"><br>
+                </div>
+                <div id="seats">
+                    <label for="seats">Seats</label><br>
+                    <select name="fuel" id="fuel">
+                        <option value="">--Select--</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select><br>
+                </div>
+                <div id="fuel">
+                    <label for="fuel">Fuel Type</label><br>
+                    <select name="fuel" id="fuel">
+                        <option value="">--Select Fuel Type--</option>
+                        <option value="petrol">Petrol</option>
+                        <option value="diesel">Diesel</option>
+                        <option value="cng">CNG</option>
+                        <option value="lpg">LPG</option>
+                        <option value="electric">Electric</option>
+                    </select><br>
+                </div>
+                <div id="transmission">
+                    <label for="transmission">Transmission Type:</label><br>
+                    <select name="transmission" id="transmission">
+                        <option value="">--Select Transmission Type--</option>
+                        <option value="manual">Manual</option>
+                        <option value="automatic">Automatic</option>
+                    </select><br>
+                </div>
+            </form>
+        </div>
+        <div id="seller_configuration">
+            <h4>Seller Configuration</h4>
+            <form action="">
+                <div id="seller">
+                    <label for="seller">Seller Type:</label><br>
+                    <select name="seller" id="seller">
+                        <option value="">--Select Seller Type--</option>
+                        <option value="individual">Individual</option>
+                        <option value="dealer">Dealer</option>
+                        <option value="trustmark_dealer">Trustmark Dealer</option>
+                    </select><br>
+                </div>
+            </form>
+        </div>    
+            <button type="submit">Submit</button>
+
+        
+    </body>
+</html>
