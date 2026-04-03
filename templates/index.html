@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predict the price</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
     <body>
         <h1>Used Car Price Prediction</h1>
@@ -15,7 +15,7 @@
             <h4>Vehicle Information</h4>
             <div>
             
-            <form action="" class="grid-2">
+            <form action="/predict" class="grid-2">
                     <div class="form-group">
                     <label for="model">Model:</label>
                     <input type="text" placeholder="alto" id="model" name="model">
@@ -37,7 +37,7 @@
         <div id="technical_specifications" class="card">
             <h4>Technical Specifications</h4>
             <div>
-            <form action="" class="grid-3">
+            <form action="/predict" class="grid-3">
                     <div class="form-group">
                     <label for="mileage">Mileage:</label>
                     <input type="number" step="any" placeholder="19.70">
@@ -91,7 +91,7 @@
         <div id="seller_configuration" class="card">
             <h4>Seller Configuration</h4>
             
-            <form action="" class="grid-1">
+            <form action="/predict" class="grid-1">
                     <div class="form-group"> 
                     <label for="seller">Seller Type:</label>
                     <select name="seller" id="seller">
