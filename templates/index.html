@@ -10,25 +10,24 @@
         <h1>Used Car Price Prediction</h1>
         <p>A website which predicts the selling price for your used car</p>
         
+        <form action="/predict" method='POST'>
+
         <!--Section1-->
         <div id="vehicle_information" class="card">
             <h4>Vehicle Information</h4>
-            <div>
-            
-            <form action="/predict" class="grid-2">
-                    <div class="form-group">
-                    <label for="model">Model:</label>
-                    <input type="text" placeholder="alto" id="model" name="model">
-                    </div>
-                    <div class="form-group">        
-                    <label for="vage">Vehicle Age:</label>
-                    <input type="number" placeholder="9" id="vage" name="vage">
-                    </div>
-                    <div class="form-group">
-                    <label for="km_driven">Kilometers Driven:</label>
-                    <input type="number" step="any" placeholder="11.69" id="km_driven" name="km_driven">
-                    </div>
-            </form>
+            <div class='grid-2'>
+                <div class="form-group">
+                <label for="model">Model:</label>
+                <input type="text" placeholder="alto" id="model" name="model">
+                </div>
+                <div class="form-group">        
+                <label for="vehicle_age">Vehicle Age:</label>
+                <input type="number" placeholder="9" id="vehicle_age" name="vehicle_age">
+                </div>
+                <div class="form-group">
+                <label for="km_driven">Kilometers Driven:</label>
+                <input type="number" step="any" placeholder="11.69" id="km_driven" name="km_driven">
+                </div>
             </div>
             
         </div>
@@ -36,76 +35,80 @@
         <!--Section2-->
         <div id="technical_specifications" class="card">
             <h4>Technical Specifications</h4>
-            <div>
-            <form action="/predict" class="grid-3">
-                    <div class="form-group">
-                    <label for="mileage">Mileage:</label>
-                    <input type="number" step="any" placeholder="19.70">
-                    </div>
-                    <div class="form-group"> 
-                    <label for="engine">Engine:</label>
-                    <input type="number" step="any" placeholder="1179">
-                    </div>
-                    <div class="form-group"> 
-                    <label for="max_power">Maximum Power:</label>
-                    <input type="number" step="any" placeholder="67.10">
-                    </div>
-                    <div class="form-group"> 
-                    <label for="seats">Seats</label>
-                    <select name="fuel" id="fuel">
-                        <option value="">--Select--</option>
-                        <option value="2">2</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                    </div>
-                    <div class="form-group"> 
-                    <label for="fuel">Fuel Type</label>
-                    <select name="fuel" id="fuel">
-                        <option value="">--Select Fuel Type--</option>
-                        <option value="petrol">Petrol</option>
-                        <option value="diesel">Diesel</option>
-                        <option value="cng">CNG</option>
-                        <option value="lpg">LPG</option>
-                        <option value="electric">Electric</option>
-                    </select>
-                    </div>
-                    <div class="form-group"> 
-                    <label for="transmission">Transmission Type:</label>
-                    <select name="transmission" id="transmission">
-                        <option value="">--Select Transmission Type--</option>
-                        <option value="manual">Manual</option>
-                        <option value="automatic">Automatic</option>
-                    </select>
-                    </div>
-                    
-            </form>
+            <div class='grid-3'>
+                <div class="form-group">
+                <label for="mileage">Mileage:</label>
+                <input type="number" name='mileage' id='mileage' step="any" placeholder="19.70">
+                </div>
+                <div class="form-group"> 
+                <label for="engine">Engine:</label>
+                <input type="number" name='engine' id='engine' step="any" placeholder="1179">
+                </div>
+                <div class="form-group"> 
+                <label for="max_power">Maximum Power:</label>
+                <input type="number" name='max_power' id='max_power' step="any" placeholder="67.10">
+                </div>
+                <div class="form-group"> 
+                <label for="seats">Seats</label>
+                <select name="seats" id="seats">
+                    <option value="">--Select--</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                </div>
+                <div class="form-group"> 
+                <label for="fuel_type">Fuel Type</label>
+                <select name="fuel_type" id="fuel_type">
+                    <option value="">--Select Fuel Type--</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+                    <option value="LPG">LPG</option>
+                    <option value="Electric">Electric</option>
+                </select>
+                </div>
+                <div class="form-group"> 
+                <label for="transmission_type">Transmission Type:</label>
+                <select name="transmission_type" id="transmission_type">
+                    <option value="">--Select Transmission Type--</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+                </div>
             </div>
         </div>
 
         <!--Section3-->
         <div id="seller_configuration" class="card">
             <h4>Seller Configuration</h4>
+            <div class='grid-1'>
             
-            <form action="/predict" class="grid-1">
-                    <div class="form-group"> 
-                    <label for="seller">Seller Type:</label>
-                    <select name="seller" id="seller">
-                        <option value="">--Select Seller Type--</option>
-                        <option value="individual">Individual</option>
-                        <option value="dealer">Dealer</option>
-                        <option value="trustmark_dealer">Trustmark Dealer</option>
-                    </select>
-                    </div>
-            </form>
+                <div class="form-group"> 
+                <label for="seller_type">Seller Type:</label>
+                <select name="seller_type" id="seller_type">
+                    <option value="">--Select Seller Type--</option>
+                    <option value="Individual">Individual</option>
+                    <option value="Dealer">Dealer</option>
+                    <option value="Trustmark Dealer">Trustmark Dealer</option>
+                </select>
+                </div>
+            </div>
             
         </div>    
             <button type="submit" class="btn">Submit</button>
+        </form>
 
+        {% if prediction_text %}
+        <div class="card result-card">
+            <h3>Predicted Price</h3>
+            <p>{{ prediction_text }}</p>
+        </div>
+        {% endif %}
         
     </body>
 </html>

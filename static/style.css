@@ -112,3 +112,11 @@ input:focus, select:focus{
     background: #45a049;
     background: linear-gradient(to right, #43a047, #27ae60);
 }
+
+.result-card {
+    margin-top: 20px;
+    background-color: #e6ffe6;
+    border: 2px solid green;
+    padding: 15px;
+    border-radius: 10px;
+}
