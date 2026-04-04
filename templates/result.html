@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESULT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% if prediction_text %}
+        <h1>Used Car Price Prediction</h1>
+        <p>A website which predicts the selling price for your used car</p>
+
+        <a href="/" class="back-btn">← Back</a>
+
+        <div class="result-wrapper">
+            <div class="result-header">
+                <h2>Prediction result</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item"><p class="feature-label">Model</p><p class="feature-value">{{ model }}</p></div>
+                <div class="feature-item"><p class="feature-label">Vehicle age</p><p class="feature-value">{{ vehicle_age }} yrs</p></div>
+                <div class="feature-item"><p class="feature-label">Km driven</p><p class="feature-value">{{ km_driven }} km</p></div>
+                <div class="feature-item"><p class="feature-label">Mileage</p><p class="feature-value">{{ mileage }} kmpl</p></div>
+                <div class="feature-item"><p class="feature-label">Engine</p><p class="feature-value">{{ engine }} cc</p></div>
+                <div class="feature-item"><p class="feature-label">Max power</p><p class="feature-value">{{ max_power }} bhp</p></div>
+                <div class="feature-item"><p class="feature-label">Seats</p><p class="feature-value">{{ seats }}</p></div>
+                <div class="feature-item"><p class="feature-label">Fuel type</p><p class="feature-value">{{ fuel_type }}</p></div>
+                <div class="feature-item"><p class="feature-label">Transmission</p><p class="feature-value">{{ transmission_type }}</p></div>
+                <div class="feature-item"><p class="feature-label">Seller type</p><p class="feature-value">{{ seller_type }}</p></div>
+            </div>
+
+            <div class="price-section">
+                <div>
+                    <p class="price-label">Predicted selling price</p>
+                    <p class="price-value">{{ prediction_text }}</p>
+                </div>
+                <span class="price-badge">Estimate</span>
+            </div>
+        </div>
+    {% endif %}
+</body>
+</html>
